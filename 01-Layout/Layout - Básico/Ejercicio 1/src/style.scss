@@ -1,0 +1,60 @@
+@use "base";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container-1,
+.container-2,
+.container-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0.2rem;
+  padding: 0.3rem 0;
+}
+
+.color-box-text {
+  color: base.$color-text;
+}
+
+@for $i from 1 through 3 {
+  .container-#{$i} > .box.base-color {
+    width: 100px;
+    background-color: base.getBaseColor($i);
+  }
+
+  $j: 1;
+  @while $j <= 4 {
+    .container-#{$i} > .darken-#{$j} {
+      background-color: darken(
+        base.getBaseColor($i),
+        base.$percent-to-darken * $j
+      );
+    }
+
+    .container-#{$i} > .lighten-#{$j} {
+      background-color: lighten(
+        base.getBaseColor($i),
+        base.$percent-to-lighten * $j
+      );
+    }
+    $j: $j + 1;
+  }
+}

@@ -1,0 +1,18 @@
+// Variables
+$base-color-container-1: rgb(200, 9, 9);
+$base-color-container-2: rgb(25, 9, 200);
+$base-color-container-3: rgb(9, 200, 38);
+$color-text: white;
+$percent-to-darken: 3%;
+$percent-to-lighten: 8%;
+
+@function getBaseColor($number) {
+  @if $number == 1 {
+    @return $base-color-container-1;
+  } @else if $number == 2 {
+    @return $base-color-container-2;
+  } @else if $number == 3 {
+    @return $base-color-container-3;
+  }
+  @return $base-color-container-1;
+}
