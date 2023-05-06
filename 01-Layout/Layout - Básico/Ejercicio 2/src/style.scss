@@ -1,0 +1,36 @@
+@import "temaA";
+
+.box {
+  height: 70px;
+  width: 70px;
+  border: 1px solid black;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: $border-radius;
+}
+
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base {
+  background-color: $color-base;
+}
+.important {
+  background-color: $color-important;
+}
+.warning {
+  background-color: $color-warning;
+}
+.principal-text {
+  font-size: $principal-font;
+}
+.secondary-text {
+  font-size: $secondary-font;
+}
+.box-shadow {
+  @extend .flex-center-center;
+  box-shadow: $box-shadow;
+}
