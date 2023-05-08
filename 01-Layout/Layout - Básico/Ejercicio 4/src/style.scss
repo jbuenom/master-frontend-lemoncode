@@ -1,0 +1,58 @@
+@use "base";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: base.$font-size-base;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.margin-card-elements {
+  margin: 0 base.$margin-around-card-elements;
+}
+
+.card {
+  display: inline-grid;
+  grid-template-columns: base.$width-card;
+  grid-template-rows: auto auto auto auto auto;
+  border: 1px solid black;
+  gap: base.$gap-card-elements;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  @extend .margin-card-elements;
+}
+
+.description {
+  @extend .margin-card-elements;
+}
+
+.date-published {
+  @extend .margin-card-elements;
+  font-weight: bold;
+  place-self: end;
+  span {
+    color: base.$color-date;
+  }
+}
+
+.btn {
+  @extend .margin-card-elements;
+  padding: 15px;
+  margin-bottom: base.$margin-around-card-elements;
+  background-color: base.$color-btn;
+  color: base.$color-btn-text;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
