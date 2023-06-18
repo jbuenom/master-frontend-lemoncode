@@ -1,0 +1,12 @@
+$color-background: coral;
+
+.item-background {
+  background-color: $color-background;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+img {
+  width: 140px;
+}
