@@ -1,0 +1,30 @@
+$background-color: indigo;
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.item-background {
+  width: 100vw;
+  background-color: $background-color;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 140px;
+}
+
+.hello-title {
+  margin: 1rem;
+  text-align: center;
+}
+
+.card-vite {
+  width: 15rem;
+  margin: 2rem;
+}
