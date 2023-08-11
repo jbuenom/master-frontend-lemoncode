@@ -1,0 +1,3 @@
+<template>
+  <MemberDetail />
+</template>
