@@ -1,0 +1,32 @@
+<div class="container">
+<h2>Login</h2>
+<div *ngIf="loading" class="spinner"></div>
+<form *ngIf="!loading" #loginForm="ngForm" class="form-login">
+  <div class="container-inputs">
+<mat-form-field class="">
+    <mat-label>Username</mat-label>
+    <input  #username="ngModel" name="username" type="email" [(ngModel)]="user.username" matInput placeholder="Ej. juan@example.es" value="" required minlength="5" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+    <mat-error *ngIf="username.errors?.['required'] && username.touched">
+        El username es obligatorio
+      </mat-error>
+      <mat-error *ngIf="username.errors?.['pattern'] && username.touched">
+        El email no tiene el formato correcto
+      </mat-error>
+      <mat-error *ngIf="username.errors?.['minlength']">
+        El username debe tener {{ username.errors?.['minlength'].requiredLength }} caracteres mínimo. Tiene sólamente {{ username.errors?.['minlength'].actualLength }}
+      </mat-error>
+  </mat-form-field>
+  <mat-form-field class="">
+    <mat-label>Password</mat-label>
+    <input #password="ngModel" name="password" type="password" [(ngModel)]="user.password" matInput placeholder="" value="" minlength="4" maxlength="16" required>
+    <mat-error *ngIf="password.errors?.['required'] && password.touched">
+        La password es obligatoria
+      </mat-error>
+    <mat-error *ngIf="password.errors?.['minlength']">
+        El password debe tener {{ password.errors?.['minlength'].requiredLength }} caracteres mínimo. Tiene sólamente {{ password.errors?.['minlength'].actualLength }}
+      </mat-error>
+  </mat-form-field>
+</div>
+    <button [disabled]="loginForm.invalid" mat-button type="button" color="primary" (click)="login()">Enviar</button>
+</form>
+</div>

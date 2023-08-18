@@ -1,0 +1,8 @@
+<div class="container">
+<app-public-header *ngIf="!isLogged"></app-public-header>
+<app-private-header *ngIf="isLogged"></app-private-header>
+<app-public-menu *ngIf="!isLogged"></app-public-menu>
+<app-private-menu *ngIf="isLogged"></app-private-menu>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+</div>

@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $secondary-color-2;
+  color: white;
+  img {
+    margin: 0 1rem;
+    width: 30px;
+  }
+  .container-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    button {
+      background-color: white;
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: white;
+  background-color: $primary-color-2;
+  img {
+    margin: 0 1rem;
+    width: 30px;
+  }
+}

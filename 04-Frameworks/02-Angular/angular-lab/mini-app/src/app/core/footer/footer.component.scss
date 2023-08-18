@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.text-primary {
+  text-align: center;
+  background-color: $primary-color-2;
+  padding: 1rem 0;
+  color: white;
+}
+
+.text-secondary {
+  text-align: center;
+  background-color: $secondary-color-2;
+  padding: 1rem 0;
+  color: white;
+}

@@ -1,0 +1,42 @@
+.title {
+  margin-left: 1rem;
+}
+
+.container {
+  margin: 1rem;
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+  width: 500px;
+}
+
+.images-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  img {
+    width: 100px;
+  }
+}
+
+.seleccionada {
+  border-bottom: 2px solid red;
+}
+
+.container-rotate {
+  margin-left: 1rem;
+  margin-top: 3rem;
+  .rotate-elements {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+  }
+  img {
+    margin-top: 5rem;
+  }
+}

@@ -1,0 +1,25 @@
+<h2 class="title">Galería</h2>
+<div class="container">
+<img [width]="widthImage" [height]="heightImage" [src]="imageSelected.src" alt="imagen principal">
+<div class="buttons">
+    <button mat-button color="accent" type="button" [disabled]="isFirst()" (click)="onBefore()">Anterior</button>
+    <button mat-button color="accent" type="button" [disabled]="isLast()" (click)="onNext()">Siguiente</button>
+    <button mat-button color="primary" type="button" (click)="onIncrease()">Aumentar</button>
+    <button mat-button color="primary" type="button" (click)="onDecrease()">Disminuir</button>
+    <button *ngIf="!showStop" mat-button color="warn" type="button" (click)="onPlay()">Play</button>
+    <button *ngIf="showStop" mat-button color="warn" type="button" (click)="onStop()">Stop</button>
+</div>
+<div class="images-list">
+<p (click)="previousPage()">Anterior</p>
+<img [ngClass]="{'seleccionada': image.id === imageSelected.id}" (click)="onImage(image.id)"  [src]="image.src" *ngFor="let image of images | slice:initPage:endPage" />
+<p (click)="nextPage()">Siguiente</p>
+</div>
+</div>
+
+<div class="container-rotate">
+<h2>Rotar imagen</h2>
+<div class="rotate-elements">
+<img width="300" rotate="45" step="15" src="../../../assets/img/pexels-denner-trindade-17821539.jpg" alt="image rotada">
+<p style="width: fit-content;" rotate="45" step="15">Prueba texto a rotar</p>
+</div>
+</div>
