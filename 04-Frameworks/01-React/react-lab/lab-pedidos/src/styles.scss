@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-left: 1rem;
+}
+
+// Header
+
+.header-container {
+  margin: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+
+  border: 2px solid black;
+  .header-element {
+    width: min-content;
+  }
+  button {
+    place-self: end end;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem;
+  }
+}
+
+// Detail
+
+.detail-container {
+  margin: 1rem;
+  .buttons-group {
+    margin: 1rem 0;
+    button {
+      padding: 0.2rem 1rem;
+    }
+  }
+  .detail-entries {
+    border: 2px solid black;
+    padding: 1rem 0;
+    .detail-entries-header,
+    .detail-entry {
+      display: grid;
+      grid-template-columns: 50px 1fr 2fr 2fr;
+      justify-content: space-around;
+      justify-items: left;
+      align-items: center;
+    }
+    .detail-entry {
+      input {
+        width: min-content;
+        margin-left: 1rem;
+      }
+      input[type="number"] {
+        margin-left: 0;
+      }
+    }
+  }
+}
