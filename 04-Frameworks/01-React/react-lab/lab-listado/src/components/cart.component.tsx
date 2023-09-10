@@ -25,8 +25,7 @@ export const Cart: React.FC = () => {
   ];
   const { petsId, setPetsId } = React.useContext(PetContext);
 
-  const handleClick = (e) => {
-    const id = String(e.target.id);
+  const handleClick = (id: string) => {
     setPetsId(petsId.filter((el) => el !== id));
   };
 
@@ -57,9 +56,8 @@ export const Cart: React.FC = () => {
               <img className="cart-item-img" src={pet.picUrl} alt="" />
               <p>{pet.title}</p>
               <img
-                id={pet.id}
                 src={deleteIcon}
-                onClick={handleClick}
+                onClick={(e) => handleClick(pet.id)}
                 alt="pet image"
               />
             </div>
