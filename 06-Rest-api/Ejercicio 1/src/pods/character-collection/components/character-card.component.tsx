@@ -24,19 +24,19 @@ export const CharacterCard: React.FunctionComponent<Props> = (props) => {
   return (
     <Card>
       <CardHeader
-        avatar={<Avatar aria-label="Character">{character.rating}</Avatar>}
+        avatar={<Avatar aria-label="Character">{character.id}</Avatar>}
         title={character.name}
-        subheader={character.address}
+        subheader={character.status}
       />
       <CardContent>
         <div className={classes.content}>
           <CardMedia
-            image={character.picture}
-            title={character.name}
+            image={character.image}
+            title={character.species}
             style={{ height: 0, paddingTop: '56.25%' }}
           />
           <Typography variant="subtitle1" gutterBottom>
-            {character.description}
+            {character.type}
           </Typography>
         </div>
       </CardContent>
