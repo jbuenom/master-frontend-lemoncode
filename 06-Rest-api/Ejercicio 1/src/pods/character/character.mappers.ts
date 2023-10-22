@@ -4,7 +4,7 @@ import * as viewModel from './character.vm';
 export const mapCharacterFromApiToVm = (
   character: apiModel.Character
 ): viewModel.Character => ({
-    id: `character.id`,
+    id: `${character.id}`,
     name: character.name,
     status: character.status,
     species: character.species,
